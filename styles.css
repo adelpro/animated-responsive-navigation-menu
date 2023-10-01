@@ -1,0 +1,191 @@
+/* Primary Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3px;
+    padding: 2px;
+    height: 50px;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: #f6f6f6;
+        z-index: 2;
+        position: fixed;
+        right: -100%;
+        transition: right 0.5s ease-in-out;
+    }
+
+    .nav.open {
+        right: 0;
+    }
+}
+
+/* sandwich-button styling */
+.sandwich-button {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 50px;
+    right: 50px;
+    appearance: none;
+    padding: 10px;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .sandwich-button {
+        display: block;
+    }
+}
+
+.sandwich-button:before,
+.sandwich-button:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: #333333;
+    width: 25px;
+    height: 2px;
+    left: 2px;
+    right: 2px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.sandwich-button:before {
+    top: 10px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.sandwich-button:after {
+    bottom: 10px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.sandwich-button.active:before {
+    top: 14px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sandwich-button.active:after {
+    bottom: 14px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* Logo Styles */
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+/* Logo Hover Effect */
+.logo:hover {
+    cursor: pointer;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .logo {
+        height: 100px;
+        width: 100px;
+        margin-top: 30px;
+    }
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    list-style: none;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Media Query for Small Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Links Styles */
+.link {
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .link {
+        font-size: 3rem;
+    }
+}
+
+.signup {
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Active Link Styles */
+.link-active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Button Container Styles */
+.btn-container {
+    margin: 5px;
+    padding: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 5px 10px 5px 5px;
+    border-radius: 20px 0 20px 0;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
